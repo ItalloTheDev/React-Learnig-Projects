@@ -1,5 +1,3 @@
-import { db } from "../firebase/config";
-
 import {
   getAuth,
   createUserWithEmailAndPassword,
@@ -25,6 +23,7 @@ export const useAuthentication = () => {
     }
   }
 
+  // create user (Register)
   const createUser = async (data) => {
     checkIfIsCancelled();
 
@@ -63,6 +62,41 @@ export const useAuthentication = () => {
     }
   };
 
+  // Logout - sign out
+
+  const logout = () => {
+    checkIfIsCancelled();
+    signOut(auth);
+  };
+
+  // Login - sign in
+  const login = async (data) => {
+    checkIfIsCancelled();
+    setLoading(true);
+    setError(false);
+
+    try {
+      //console.log(data);
+      await signInWithEmailAndPassword(auth, data.email, data.password);
+      setLoading(false);
+    } catch (error) {
+      let systemErrorMessage;
+
+      if (error.message.includes("user-not-found")) {
+        systemErrorMessage = "User not found!";
+      }
+      if (error.message.includes("wrong-password")) {
+        systemErrorMessage = "Wrong password!";
+      } else {
+        systemErrorMessage = "An error occurred, please try again later!";
+      }
+
+      //console.log("LOGIN ERROR:", error.code);
+      setError(systemErrorMessage);
+      setLoading(false);
+    }
+  };
+
   useEffect(() => {
     return () => setCancelled(true);
   }, []);
@@ -72,5 +106,7 @@ export const useAuthentication = () => {
     createUser,
     error,
     loading,
+    logout,
+    login,
   };
 };
