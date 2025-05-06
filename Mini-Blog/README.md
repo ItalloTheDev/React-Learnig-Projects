@@ -41,4 +41,5 @@ This is a simple and functional blog project built with **React**, created as pa
 - Replace the Firebase configuration in src/firebase/config.js with your project credentials
 
 4. **Run the project**
-   npm run dev
+
+- npm run dev
