@@ -1,4 +1,4 @@
-import { useState, useEffect, use } from "react";
+import { useState, useEffect } from "react";
 import { db } from "../firebase/config";
 import {
   collection,
@@ -30,6 +30,12 @@ export const useFetchDocuments = (docCollection, search = null, uid = null) => {
           q = await query(
             collectionRef,
             where("tagsArray", "array-contains", search),
+            orderBy("createdAt", "desc")
+          );
+        } else if (uid) {
+          q = await query(
+            collectionRef,
+            where("uid", "==", uid),
             orderBy("createdAt", "desc")
           );
         } else {
