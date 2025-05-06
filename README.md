@@ -1,4 +1,4 @@
-# React-Learnig-Projects
+# React-Learning-Projects
 
 This repository contains multiple projects developed as part of courses.
 
@@ -6,7 +6,7 @@ This repository contains multiple projects developed as part of courses.
 
 ### 📁 [Mini-Blog](./Mini-Blog/)
 
-A brief description of Project One.
+This is a simple and functional blog project built with **React**, created as part of my learning journey. It includes essential features such as post creation, dynamic routing, and search functionality — all styled with CSS modules.
 
 ---
 
