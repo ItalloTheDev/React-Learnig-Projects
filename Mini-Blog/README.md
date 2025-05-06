@@ -12,10 +12,6 @@ This is a simple and functional blog project built with **React**, created as pa
 - 👨‍👩‍👧‍👦 User authentication (signup/login)
 - 🎨 Scoped styles using CSS Modules
 
-## 📷 Preview
-
-![Mini Blog Preview](https://user-images.githubusercontent.com/your-screenshot-url.png)
-
 ## 🛠️ Technologies
 
 - React
