@@ -23,21 +23,6 @@ This is a simple and functional blog project built with **React**, created as pa
 - Firebase (Authentication + Firestore)
 - CSS Modules
 
-## 📁 Project Structure
-
-Mini-Blog/
-├── public/
-├── src/
-│ ├── components/ # Reusable UI components
-│ ├── hooks/ # Custom React hooks
-│ ├── pages/ # App pages (Home, Dashboard, etc.)
-│ ├── context/ # Auth context
-│ ├── firebase/ # Firebase config
-│ ├── styles/ # CSS Modules
-│ ├── App.js
-│ └── main.jsx
-└── README.md
-
 ## 🔧 Setup Instructions
 
 1. **Clone the repository**
@@ -61,5 +46,3 @@ Mini-Blog/
 
 4. **Run the project**
    npm run dev
-
-Made with 💙 by @ItalloTheDev
